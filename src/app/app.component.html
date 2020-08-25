@@ -1,7 +1,7 @@
-<div class="alert alert-success" role="alert">
-  alert alert-success class applied
+<button class="btn-primary" (click)="togglevalue()" >Display Details</button>
+<button style="margin-left: 20px;" class="btn-primary" (click)="addservers()" >Add Servers</button>
+<p *ngIf="randomtxt">Secret Password = tuna</p>
+<div *ngFor="let server of servers let i=index">    
+    <div [ngClass]="{'whitecolor':i>=5 }"  [ngStyle]="{'background-color':i>=5 ? 'blue' : '','margin-bottom':'20px','width':'auto'}">{{i}} {{server}}</div>
+
 </div>
-<div class="alert alert-danger" role="alert">
-  alert alert-danger class applied
-</div>
-<app-mycomponent></app-mycomponent>
